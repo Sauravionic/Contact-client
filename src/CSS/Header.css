@@ -1,0 +1,73 @@
+
+.header {
+  background-color: #070C14;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(170, 171, 176, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.heading {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width:7%;
+    padding-left: 10px;
+}
+.headingLink{
+    color: rgb(221, 214, 214);
+    text-decoration: none;
+}
+.heading h3 {
+    margin: 0;
+    color: rgb(221, 214, 214);
+    letter-spacing: 1.7px;
+    padding-left: 15px;
+}
+
+.searchBar {
+    width: 25%;
+    display: flex;
+    position: relative;
+}
+.searchBar input {
+    /* background: #acafb2; */
+    background-color: #343941;
+    border: none;
+    padding: 7px;
+    width: 100%;
+    border-radius: 5px;
+    opacity: 0.8;
+    padding-left: 8%;
+    letter-spacing: 1.2px;
+}
+.searchBar input:focus {
+    outline: none;
+    opacity: 1;
+    background-color: #d7dbe1;
+}
+.searchBar input::placeholder {
+    color: #9da3ac;
+}
+.searchBar .searchIcon {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    color: #9da3ac;
+    opacity: 1;
+}
+.profileImgContainer {
+    width: 5%;
+}
+.profileImg img {
+    width: 40%;
+    border-radius: 20px;
+    margin-top: 4px;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1020px) {
+    .searchBar {
+        display: none;
+    }
+}

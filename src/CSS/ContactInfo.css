@@ -1,0 +1,11 @@
+.contactInfoContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.contactFirstMenu {
+    flex-basis: 25%;
+}
+.contactSecondMenu {
+    flex-basis: 65%;
+}

@@ -1,0 +1,12 @@
+.messagesContainer {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 40.7em;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.messagesContainer::-webkit-scrollbar {
+    display: none;
+}
