@@ -3,6 +3,7 @@ import "../CSS/ContactInfoMenu.css";
 import Photo1 from "../Images/Photo1.jpg";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { TbFileDescription } from "react-icons/tb";
 import { contactData } from "../data";
 import { useNavigate } from 'react-router-dom';
@@ -13,10 +14,12 @@ const ContactInfoMenu = () => {
    const [contact, setContact] = useState({});
    const [message, setMessage] = useState("");
    const [error, setError] = useState(false);
+   const [loading, setLoading] = useState(false);
 
    const compose = async (e) => {
       e.preventDefault();
       setError(false);
+      setLoading(true);
       const otp = Math.random().toString().substr(2, 6);
       console.log(otp);
       const messages = "Hi your otp is " + otp + ": Extra Message:-\n:-  " + message;
@@ -37,7 +40,7 @@ const ContactInfoMenu = () => {
                "message": messages,
                "category": contact.category
             })
-
+            setLoading(false);
             window.location = "/";
 
          } catch (err) {
@@ -92,7 +95,7 @@ const ContactInfoMenu = () => {
            <hr />
            <div className='box-body-container3'>
               <input type="text" placeholder='Enter your message here' onChange={(e) => setMessage(e.target.value)}/>
-              <button onClick={compose}>Compose</button>
+              {loading == false ? <button onClick={compose}>Compose</button> :  <button disabled="true" ><AiOutlineLoading3Quarters/></button> } 
            </div>
         </div>
         {error && <span className='error_span'>There is some issue with the server. Hang On!!</span>}

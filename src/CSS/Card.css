@@ -47,3 +47,13 @@
     border-radius: 5px;
     letter-spacing: 1.2px;
 }
+
+@media screen and (max-width: 1020px) {
+    .cardIcon {
+        display: none;
+    }
+
+    .cardImg {
+        width: 17%;
+    }
+}

@@ -37,13 +37,13 @@
         margin-left: 0px;
     }
     .firstMenu {
-        padding-left: 60px;
-        padding-right: 60px;
-        margin-top: 90px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 30px;
     }
     .firstMenuContainer {
         width: 100%;
-        max-height: 25rem;
+        max-height: 19rem;
         margin-bottom: 20px;
     }
 }

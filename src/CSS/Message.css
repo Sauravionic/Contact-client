@@ -46,3 +46,25 @@
     font-weight: 500;
     letter-spacing: 1.2px;
 }
+
+@media screen and (max-width: 1020px) {
+    .messageCard {
+        padding: 5px;
+    }
+
+    .messageCard-header {
+        flex-direction: column;
+    }
+
+    .messageCard-body {
+        flex-direction: column;
+    }
+
+    .messageCard-otp {
+        flex-direction: column;
+    }
+
+    .messageCard-otp span {
+        text-align: center;
+    }
+}

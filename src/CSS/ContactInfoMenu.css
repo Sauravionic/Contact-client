@@ -134,3 +134,70 @@
     height: 100%;
     padding-left: 10px;
 }
+button:hover {
+    background-color: #33435d;
+}
+
+@media screen and (max-width: 1020px) {
+    .contactInfoMenuContainer {
+        margin: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .box-body-container1-Heading {
+        padding-top: 18px;
+        display: block;
+        gap: 0px;
+        text-align: left;
+    }
+    .box-body-container1-Heading h1 {
+        font-size: 25px;
+    }
+    .box-body-container1-Heading span {
+        font-size: 15px;
+        letter-spacing: 1px;
+        display: inline-block;
+        margin-top: 5px;
+        font-weight: unset;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 2px;
+        padding-bottom: 3px;
+    }
+    .box-body-img {
+        display: none;
+    }
+
+    .box-body-container2 .icon {
+        font-size: 25px;
+    }
+    .box-body-container2 h2 {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 1.4px;
+    }
+    .box-body-container2 span {
+        margin-top: -11px;
+    }
+    .box-body-container2 .inner-container2 {
+        display: none;
+    }
+    .box-body-container3 {
+        display: block;
+
+    }
+    .box-body-container3 input {
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        box-sizing: border-box;
+        width: 100%;
+        border: none;
+    }
+    .box-body-container3 button {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom-left-radius: 20px;
+    }
+}

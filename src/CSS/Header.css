@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     height: 100%;
-    width:7%;
     padding-left: 10px;
 }
 .headingLink{
@@ -69,5 +68,14 @@
 @media screen and (max-width: 1020px) {
     .searchBar {
         display: none;
+    }
+    .profileImgContainer {
+        width: 13%;
+    }
+    .profileImg img {
+        width: 60%;
+    }
+    .headingLink h3 {
+        font-size: 21px;
     }
 }

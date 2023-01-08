@@ -2,9 +2,6 @@ hr {
     margin: 0;
 }
 @media screen and (max-width: 1020px) {
-    body {
-        min-width: 100vh;
-    }
     .menu {
         flex-direction: column;
     }
