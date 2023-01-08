@@ -1,70 +1,58 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h1>Contacts-Web-App</h1>
+<hr><p>A React web app that can send an OTP ( via SMS ) to a list of Contacts, one at a time</p><h2>General Information</h2>
+<hr><ul>
+<li>A contact web app which serves the purpose of otp sending to one user at a time asynchronously.</li>
+</ul><ul>
+<li>It solves the issue of sending otp to users along with some extra message and can be used by any user to serve their purpose without extra credits or coding.</li>
+</ul><ul>
+<li>Serves the user with a fluent web application made with React as its frontend and nodeJS as its backend.
+Application is fully responsive for small sized screens, mid sized screens and desktops.</li>
+</ul><h2>Technologies Used</h2>
+<hr><ul>
+<li>HTML</li>
+</ul><ul>
+<li>CSS</li>
+</ul><ul>
+<li>JavaScript</li>
+</ul><ul>
+<li>React</li>
+</ul><ul>
+<li>NodeJS</li>
+</ul><ul>
+<li>Twilio</li>
+</ul><ul>
+<li>Npm</li>
+</ul><h2>Features</h2>
+<hr><ul>
+<li>OTP SENDING</li>
+</ul><ul>
+<li>RESPONSIVE</li>
+</ul><ul>
+<li>INTERACTIVE</li>
+</ul><ul>
+<li>FLUENT &amp; MINIMALIST</li>
+</ul><ul>
+<li>EASY TO USE</li>
+</ul><h2>Setup</h2>
+<hr><p>Requirement:- Internet<br>
+Dependency Used:- 1:- Server:- • Nodemon
+• Cors
+• Twilio<br>
+Dependency Used:- 2:- Client:- • react-router-dom
+• axios<br>
+• react-icons</p><h2>Usage</h2>
+<hr><p>On Home Page there are various contacts listed (dummy data). Clicking on the contact will redirect to another page where users can compose a message and send. An Otp will be sent to contact's phone number along with the extra message - example - ( Hi! Your Otp is 123456. Extra Message :- Hello There ). After this users will be redirected to the home page where they can see the sent messages sorted in descending order based on timestamp of the message.</p><h5>Code Examples</h5><ul>
+<li>API Calls to Twilio</li>
+</ul><p><code>router.post("/", async (req, res, next) =&gt; {     const newInfo = new Info(req.body);      const query = { $text: { $search: req.body.phoneNo } };     try {         const savedInfo = await newInfo.save();         res.status(200).json(savedInfo);     } catch (err) {         console.log(err);         res.status(404).json();     } })  //Get Info router.get("/", async (req, res, next) =&gt; {     try {         const info = await Info.find().sort('-createdAt');         res.status(200).json(info);     } catch (err) {         res.status(404).json();     } })</code></p><h2>Project Status</h2>
+<hr><p>Completed</p><h2>Improvements</h2>
+<hr><ul>
+<li>Dummy Data will be changed to data which can be input by users i.e. User made Contact in the next update.</li>
+</ul><ul>
+<li>Existing designs will also be changed in further updates</li>
+</ul><h2>Features that can be added</h2>
+<hr><ul>
+<li>Further Design will be added in the next update</li>
+</ul><ul>
+<li>More Screens will be added for the ease of user interaction.</li>
+</ul><h2>Contact</h2>
+<hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/saurav-srivastava-4b71b5188/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a><span style="margin-right: 30px;"></span><a href="https://github.com/Sauravionic"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a></p>
